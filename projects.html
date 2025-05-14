@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger" tabindex="0" aria-label="Open menu" role="button">
+                <span></span><span></span><span></span>
+            </div>
+            <button class="darkmode-toggle" id="darkmode-toggle" aria-label="Toggle dark mode">🌙</button>
+        </nav>
+    </header>
+    <main>
+        <section class="projects" id="projects" data-aos="fade-up">
+            <h1>Projects</h1>
+            <div class="project-grid">
+                <!-- Example project card -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/project1.jpg" alt="Project 1" class="project-img" />
+                    <h2>Project Title 1</h2>
+                    <p>Brief description of the project goes here. Highlight features and tech stack.</p>
+                    <div class="project-tags">Python, Django, REST API</div>
+                    <div class="project-links">
+                        <a href="#" class="btn">View Code</a>
+                        <a href="#" class="btn">Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/project2.jpg" alt="Project 2" class="project-img" />
+                    <h2>Project Title 2</h2>
+                    <p>Short description for project 2. Mention technologies and purpose.</p>
+                    <div class="project-tags">Flask, Bootstrap</div>
+                    <div class="project-links">
+                        <a href="#" class="btn">View Code</a>
+                        <a href="#" class="btn">Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/project3.jpg" alt="Project 3" class="project-img" />
+                    <h2>Project Title 3</h2>
+                    <p>Short description for project 3. Mention technologies and purpose.</p>
+                    <div class="project-tags">HTML, CSS, JavaScript</div>
+                    <div class="project-links">
+                        <a href="#" class="btn">View Code</a>
+                        <a href="#" class="btn">Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/images/project4.jpg" alt="Project 4" class="project-img" />
+                    <h2>Project Title 4</h2>
+                    <p>Short description for project 4. Mention technologies and purpose.</p>
+                    <div class="project-tags">React, Tailwind CSS</div>
+                    <div class="project-links">
+                        <a href="#" class="btn">View Code</a>
+                        <a href="#" class="btn">Live Demo</a>
+                    </div>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <a href="#" aria-label="GitHub"><img src="assets/images/github.svg" alt="GitHub"></a>
+            <a href="#" aria-label="LinkedIn"><img src="assets/images/linkedin.svg" alt="LinkedIn"></a>
+            <a href="#" aria-label="YouTube"><img src="assets/images/youtube.svg" alt="YouTube"></a>
+        </div>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>

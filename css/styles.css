@@ -192,6 +192,56 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
+@media (max-width: 900px) {
+  .about-flex {
+    flex-direction: column;
+    gap: 2.2rem;
+    align-items: stretch;
+  }
+  .about-left, .about-right {
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .about {
+    padding: 1.2rem 0.6rem;
+    border-radius: 1.2rem;
+  }
+  .about-flex {
+    gap: 1.2rem;
+  }
+  .about-left, .about-right {
+    padding: 0;
+    box-shadow: none;
+    min-width: 0;
+  }
+  .education-card {
+    padding: 1rem 0.5rem;
+    font-size: 0.97rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 0.5rem 0.2rem;
+  }
+  .about-flex {
+    gap: 0.7rem;
+  }
+  .about-left, .about-right {
+    max-width: 100%;
+    min-width: 0;
+    padding: 0;
+  }
+  .education-card {
+    padding: 0.7rem 0.3rem;
+    font-size: 0.91rem;
+  }
+}
+
 .about-left {
   flex: 1 1 260px;
   max-width: 350px;
@@ -219,7 +269,7 @@ header {
 .profile-img {
   width: 140px;
   height: 140px;
-  border-radius: 50%;
+  border-radius: 20%;
   object-fit: cover;
   box-shadow: 0 8px 32px rgba(108,71,255,0.18), var(--shadow);
   border: 5px solid #fff;
@@ -257,15 +307,42 @@ header {
 }
 
 .about-bio {
-  font-size: 1.08rem;
-  color: #4a2bbf;
-  background: rgba(255,255,255,0.44);
-  padding: 1rem 1.1rem;
-  border-radius: 1.1rem;
-  margin-bottom: 1.1rem;
-  box-shadow: 0 2px 12px #8ec5fc22;
+  font-size: 1.17rem;
+  font-family: 'Rubik', 'Segoe UI', Arial, sans-serif;
+  color: #3d2770;
+  background: linear-gradient(120deg, #f9f9fb 60%, #e0c3fc 100%);
+  padding: 2.7rem 1.3rem;
+  border-radius: 1.5rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 4px 18px #8ec5fc22, 0 1px 8px #e0c3fc33;
   text-align: center;
-  line-height: 1.7;
+  line-height: 1.85;
+  border-left: 4px solid #8ec5fc;
+  border-right: 4px solid #e0c3fc;
+  letter-spacing: 0.1px;
+  min-height: 260px;
+  transition: box-shadow 0.3s, background 0.3s;
+}
+@media (max-width: 600px) {
+  .about-bio {
+    min-height: 170px;
+    padding: 1.6rem 0.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .about-bio {
+    min-height: 120px;
+    padding: 1.3rem 0.5rem;
+  }
+}
+.about-bio strong {
+  color: #6c47ff;
+  font-weight: 700;
+  text-shadow: 0 1px 6px #e0c3fc33;
+}
+.about-bio:hover, .about-bio:focus {
+  box-shadow: 0 8px 32px #8ec5fc33, 0 2px 12px #e0c3fc33;
+  background: linear-gradient(120deg, #e0c3fc 40%, #f9f9fb 100%);
 }
 
 .about-social {

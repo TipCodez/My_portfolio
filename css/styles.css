@@ -139,27 +139,38 @@ header {
   position: fixed;
   right: 2.2rem;
   bottom: 2.2rem;
-  width: 3.3rem;
-  height: 3.3rem;
+  z-index: 20;
   background: linear-gradient(120deg, #8ec5fc 0%, #6c47ff 100%);
   color: #fff;
   border: none;
+  outline: none;
   border-radius: 50%;
-  box-shadow: 0 6px 24px #6c47ff44, 0 2px 8px #e0c3fc33;
-  font-size: 1.55rem;
+  width: 56px;
+  height: 56px;
+  box-shadow: 0 4px 24px #6c47ff33, 0 1.5px 6px #8ec5fc44;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10000;
+  font-size: 2rem;
   cursor: pointer;
-  opacity: 0.88;
-  transition: background 0.2s, opacity 0.2s, transform 0.2s;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  animation: floatBtn 2.7s ease-in-out infinite alternate;
+}
+@keyframes floatBtn {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .scroll-btn:hover, .scroll-btn:focus {
   background: linear-gradient(120deg, #6c47ff 0%, #8ec5fc 100%);
-  opacity: 1;
-  transform: scale(1.09);
-  outline: none;
+  box-shadow: 0 8px 32px #6c47ff44, 0 2px 12px #8ec5fc44;
+  transform: scale(1.07) translateY(-2px);
 }
 body.dark .scroll-btn {
   background: linear-gradient(120deg, #3a3a60 0%, #6c47ff 100%);

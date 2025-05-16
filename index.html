@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Home</title>
+    <title>Portfolio | Raph</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap" rel="stylesheet">
@@ -16,10 +16,10 @@
         <nav class="navbar">
             <div class="logo">Portfolio</div>
             <ul class="nav-links">
-                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-                <li><a href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
-                <li><a href="projects.html"><i class="fa-solid fa-code"></i> Projects</a></li>
-                <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger" id="hamburger" tabindex="0" aria-label="Open menu" role="button">
                 <span></span><span></span><span></span>
@@ -28,27 +28,189 @@
         </nav>
     </header>
     <main>
-        <section class="hero" id="hero">
-            <h1 class="headline"><span id="typed"></span></h1>
-            <p class="tagline">Hi, I’m [Your Name], Python Developer & Cybersecurity Enthusiast</p>
-            <button class="see-work" id="see-work">See My Work</button>
+        <!-- Hero Section -->
+        <section class="hero" id="hero" data-aos="fade-up">
+            <h1 class="headline"><span id="typed">Hi, I’m Raph</span></h1>
+            <p class="tagline">Python Developer &amp; Cybersecurity Enthusiast</p>
+            <button class="see-work" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">See My Work</button>
         </section>
+        <hr class="section-divider" aria-hidden="true">
+        <!-- About Section -->
+        <section class="about" id="about" data-aos="fade-up">
+            <div class="about-flex">
+                <div class="about-left">
+                    <img src="assets/images/profile.jpg" alt="Profile" class="profile-img" />
+                    <div class="quick-info">
+                        <h2>Raph</h2>
+                        <p class="subtitle">Python Developer &amp; Content Creator</p>
+                        <p class="about-bio">
+I am a BSc. Computer Science student at the University of Energy and Natural Resources with a strong passion for technology. As a Python developer and a networking and cybersecurity enthusiast, I enjoy exploring and building secure, efficient systems. I'm also an online instructor, sharing my knowledge with others, and I have experience in graphic design and video editing, allowing me to bring a creative edge to technical projects.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-right">
+                    <div class="education-card" style="background: linear-gradient(120deg, #f9f9fb 60%, #e0c3fc 100%); border-radius: 1.2rem; box-shadow: 0 4px 18px #8ec5fc22, 0 1px 8px #e0c3fc33; padding: 1.5rem 1.2rem; margin-top: 1.2rem;">
+                        <h3 style="margin-top:0; color:#6c47ff;"><i class="fas fa-graduation-cap"></i> Education</h3>
+                        <ul style="list-style: disc inside; color:#3d2770; font-size:1.07rem; margin:0; padding-left:1rem;">
+                            <li><strong>B.Sc. Computer Science</strong> – University of Energy and Natural Resources</li>
+                            <li>Expected Graduation: 2026</li>
+                            <li>Relevant coursework: Software Engineering, Cyber Security, Web Development</li>
+                        </ul>
+                    </div>
+                    <h1 class="about-headline">Skills and Experience</h1>
+                    <div class="skills-section">
+                        <h3><i class="fas fa-code"></i> Languages &amp; Frameworks</h3>
+                        <ul class="skills-list">
+                            <li>Python, Django, Flask, REST APIs</li>
+                            <li>HTML, CSS, JavaScript, Bootstrap</li>
+                            <li>React (basic), Tailwind CSS (beginner)</li>
+                        </ul>
+                        <h3><i class="fas fa-tools"></i> Tools</h3>
+                        <ul class="skills-list">
+                            <li>Git, GitHub, CI/CD basics</li>
+                            <li>Wireshark, Nmap</li>
+                        </ul>
+                        <h3><i class="fas fa-paint-brush"></i> Creative</h3>
+                        <ul class="skills-list">
+                            <li>Adobe Premiere Pro, After Effects</li>
+                            <li>Canva, Photoshop</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="section-divider" aria-hidden="true">
+        <!-- Projects Section -->
+        <section class="projects" id="projects" data-aos="fade-up">
+            <div class="projects-bg-blur"></div>
+            <h1>Projects</h1>
+            <div class="project-grid">
+                <!-- Example project card -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/project1.jpg" alt="Project 1" class="project-img" />
+                    <h2>Project Title 1</h2>
+                    <p>Brief description of the project goes here. Highlight features and tech stack.</p>
+                    <div class="project-tags">Python, Django, REST API</div>
+                    <div class="project-links">
+                        <a href="#" class="btn">View Code</a>
+                        <a href="#" class="btn">Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/project2.jpg" alt="Project 2" class="project-img" />
+                    <h2>Project Title 2</h2>
+                    <p>Short description for project 2. Mention technologies and purpose.</p>
+                    <div class="project-tags"><span>Flask</span><span>Bootstrap</span></div>
+                    <div class="project-links">
+                        <a href="#" class="btn">View Code</a>
+                        <a href="#" class="btn">Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/myproject.jpg" alt="My Project" class="project-img" />
+                    <h2>Project Title 3</h2>
+                    <p>Short description for project 3. Mention technologies and purpose.</p>
+                    <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                    <div class="project-links">
+                        <a href="#" class="btn">View Code</a>
+                        <a href="#" class="btn">Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/images/project4.jpg" alt="Project 4" class="project-img" />
+                    <h2>Project Title 4</h2>
+                    <p>Short description for project 4. Mention technologies and purpose.</p>
+                    <div class="project-tags"><span>React</span><span>Tailwind CSS</span></div>
+                    <div class="project-links">
+                        <a href="#" class="btn">View Code</a>
+                        <a href="#" class="btn">Live Demo</a>
+                    </div>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </section>
+        <hr class="section-divider" aria-hidden="true">
+        <!-- Contact Section -->
+        <section class="contact" id="contact" data-aos="fade-up">
+            <h1>Contact Me</h1>
+            <form id="contact-form" action="https://formspree.io/f/xbloqooq" method="POST" novalidate>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div id="form-message" style="display:none; margin-top:1rem; font-weight:500;"></div>
+        </section>
+        <hr class="section-divider" aria-hidden="true">
     </main>
     <footer>
         <div class="social-icons">
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/TipCodez" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/tipkode-raphael-9488b435a/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/@TipKodez" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://web.facebook.com/raphaelstarrix" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/@tip.kode" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://x.com/tipraph" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             <a href="#" aria-label="Snapchat"><i class="fab fa-snapchat"></i></a>
             <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>&copy; 2025 Raphael Tipkode. All rights reserved.</p>
     </footer>
     <script src="js/main.js"></script>
     <script>
+      // Smooth scroll for nav links
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if(target) {
+            e.preventDefault();
+            target.scrollIntoView({behavior:'smooth'});
+          }
+        });
+      });
+      // Contact form feedback
+      const form = document.getElementById('contact-form');
+      const messageDiv = document.getElementById('form-message');
+      if(form) {
+        form.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          messageDiv.style.display = 'none';
+          messageDiv.textContent = '';
+          const formData = new FormData(form);
+          try {
+            const response = await fetch(form.action, {
+              method: 'POST',
+              body: formData,
+              headers: {
+                'Accept': 'application/json'
+              }
+            });
+            if (response.ok) {
+              messageDiv.style.display = 'block';
+              messageDiv.style.color = '#2ecc40';
+              messageDiv.textContent = 'Thank you! Your message has been sent.';
+              form.reset();
+            } else {
+              const data = await response.json();
+              messageDiv.style.display = 'block';
+              messageDiv.style.color = '#e74c3c';
+              if (data.errors) {
+                messageDiv.textContent = data.errors.map(error => error.message).join(', ');
+              } else {
+                messageDiv.textContent = 'Oops! There was a problem submitting your form.';
+              }
+            }
+          } catch (error) {
+            messageDiv.style.display = 'block';
+            messageDiv.style.color = '#e74c3c';
+            messageDiv.textContent = 'Oops! There was a problem submitting your form.';
+          }
+        });
+      }
       AOS.init();
     </script>
 </body>

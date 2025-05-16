@@ -1,5 +1,53 @@
 // main.js - Portfolio site interactivity
 
+// Toast Notification Logic
+window.addEventListener('DOMContentLoaded', function() {
+  const toast = document.getElementById('toast');
+  if (toast) {
+    toast.style.display = 'block';
+    toast.classList.add('show');
+  }
+
+  // Floating Scroll Button Logic
+  const scrollBtn = document.getElementById('scroll-btn');
+  const scrollIcon = scrollBtn ? scrollBtn.querySelector('i') : null;
+  const contactSection = document.getElementById('contact');
+
+  function updateScrollBtn() {
+    if (!scrollBtn || !scrollIcon) return;
+    if (window.scrollY < window.innerHeight * 0.4) {
+      // Near top: show down arrow
+      scrollIcon.classList.remove('fa-arrow-up');
+      scrollIcon.classList.add('fa-arrow-down');
+      scrollBtn.setAttribute('aria-label', 'Scroll Down');
+    } else {
+      // Scrolled down: show up arrow
+      scrollIcon.classList.remove('fa-arrow-down');
+      scrollIcon.classList.add('fa-arrow-up');
+      scrollBtn.setAttribute('aria-label', 'Scroll Up');
+    }
+  }
+
+  window.addEventListener('scroll', updateScrollBtn);
+  updateScrollBtn();
+
+  if (scrollBtn) {
+    scrollBtn.addEventListener('click', function() {
+      if (window.scrollY < window.innerHeight * 0.4) {
+        // Scroll to bottom/contact
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+      } else {
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
+});
+
 // Hamburger menu toggle
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');

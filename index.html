@@ -33,6 +33,9 @@
             <h1 class="headline"><span id="typed">Hi, I’m TipKode</span></h1>
             <p class="tagline">Python Developer &amp; Cybersecurity Enthusiast</p>
             <button class="see-work" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">See My Work</button>
+        <div id="toast" class="toast-notification" style="display:none;">
+          👋 Welcome! Explore my projects and connect with me below.
+        </div>
         </section>
         <!-- About Section -->
         <section class="about" id="about" data-aos="fade-up">
@@ -149,6 +152,10 @@
             <div id="form-message" style="display:none; margin-top:1rem; font-weight:500;"></div>
         </section>
     </main>
+    <!-- Floating Scroll Button -->
+    <button id="scroll-btn" class="scroll-btn" aria-label="Scroll Down">
+      <i class="fas fa-arrow-down"></i>
+    </button>
     <footer>
         <div class="social-icons">
             <a href="https://github.com/TipCodez" aria-label="GitHub"><i class="fab fa-github"></i></a>

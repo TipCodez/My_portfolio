@@ -13,7 +13,7 @@ Welcome to my official portfolio website! I'm Raphael (TipKode), a passionate Py
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
-- [Technologies Used](#technologies-used)
+
 - [Dependencies](#dependencies)
 - [Deployment](#deployment)
 - [Preview](#preview)

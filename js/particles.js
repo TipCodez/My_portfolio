@@ -26,7 +26,15 @@
   resize();
 
   // Particle settings
-  const STAR_COLOR = 'rgba(255,255,255,0.85)';
+  const STAR_COLORS = [
+    '255,255,255',   // white
+    '140,197,252',   // blue
+    '255,184,227',   // pink
+    '255,235,59',    // yellow
+    '108,71,255',    // purple
+    '0,255,255',     // aqua
+    '255,120,0'      // orange
+  ];
   const BUBBLE_COLORS = [
     'rgba(140,197,252,0.55)', // blue
     'rgba(255,184,227,0.55)', // pink
@@ -35,8 +43,8 @@
     'rgba(255,235,59,0.45)',  // yellow
     'rgba(76,175,80,0.45)'    // green
   ];
-  const STAR_COUNT = Math.floor(width / 22);
-  const BUBBLE_COUNT = Math.floor(width / 42);
+  const STAR_COUNT = Math.floor(width / 28);
+  const BUBBLE_COUNT = 7;
   const particles = [];
 
   // Star particles
@@ -46,7 +54,9 @@
       x: Math.random() * width,
       y: Math.random() * height,
       r: Math.random() * 0.9 + 0.5,
-      speed: Math.random() * 0.4 + 0.1
+      speed: Math.random() * 0.4 + 0.1,
+      color: STAR_COLORS[Math.floor(Math.random() * STAR_COLORS.length)],
+      sparkleOffset: Math.random() * 1000 // for unique twinkle
     });
   }
   // Bubble particles
@@ -55,7 +65,7 @@
       type: 'bubble',
       x: Math.random() * width,
       y: Math.random() * height,
-      r: Math.random() * 4 + 4,
+      r: Math.random() * 1.2 + 0.8,
       color: BUBBLE_COLORS[Math.floor(Math.random() * BUBBLE_COLORS.length)],
       speed: Math.random() * 0.7 + 0.25
     });
@@ -65,10 +75,12 @@
     ctx.clearRect(0, 0, width, height);
     for (let p of particles) {
       if (p.type === 'star') {
+        // Sparkle animation: gently pulse opacity
+        const sparkle = 0.7 + 0.3 * Math.sin(Date.now() / 650 + p.sparkleOffset);
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, 2 * Math.PI);
-        ctx.fillStyle = STAR_COLOR;
-        ctx.shadowColor = '#fff';
+        ctx.fillStyle = `rgba(${p.color},${sparkle})`;
+        ctx.shadowColor = `rgba(${p.color},1)`;
         ctx.shadowBlur = 8;
         ctx.fill();
         ctx.shadowBlur = 0;

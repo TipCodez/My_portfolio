@@ -26,7 +26,7 @@ seeWork && seeWork.addEventListener('click', () => {
 const typed = document.getElementById('typed');
 if (typed) {
   const messages = [
-    "Hi, I’m [Your Name]",
+    "Hi, I’m TipKode",
     "Python Developer & Cybersecurity Enthusiast"
   ];
   let msgIdx = 0, charIdx = 0, isDeleting = false;

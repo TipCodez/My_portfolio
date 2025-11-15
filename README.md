@@ -30,7 +30,7 @@ Welcome to my official portfolio website! I'm Raphael (TipKode), a passionate Py
 - **Location:** Ghana
 - **Education:** BSc. Computer Science student at the University of Energy and Natural Resources
 - **Focus:** Python development, cybersecurity, networking, online teaching, graphic design, and video editing
-- **Contact:** tipkode@gmail.com
+
 
 ---
 
